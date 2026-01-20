@@ -479,7 +479,7 @@ class PenilaianController extends Controller
         $pdf->SetFont("Times", "BU", "12");
       $pdf->Cell(328, 60, "SITI MASTIAROH,S.Ag", 0, 1, "C");
         $pdf->SetFont("Times", "", "12");
-        $pdf->Cell(327, -50, "NIP:196306211984101010", 0, 1, "C");
+        $pdf->Cell(327, -50, "NIP:196925121993032000", 0, 1, "C");
 
         $pdf->Output();
         exit();
@@ -625,7 +625,7 @@ class PenilaianController extends Controller
         $pdf->SetFont("Times", "BU", "12");
        $pdf->Cell(328, 60, "SITI MASTIAROH,S.Ag", 0, 1, "C");
         $pdf->SetFont("Times", "", "12");
-        $pdf->Cell(327, -50, "NIP:196306211984101010", 0, 1, "C");
+        $pdf->Cell(327, -50, "NIP:196925121993032000", 0, 1, "C");
 
         $pdf->Output();
         exit();

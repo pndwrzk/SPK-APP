@@ -149,7 +149,7 @@ class SuratKeputusanController extends Controller
             5,
             "dengan nama di atas dinobatkan sebagai guru terbaik pada periode " .
                 $sk->periode .
-                " dan berhak mewakilkan sekolah dalam",
+                " dan berhak mendapatkan piagam",
             0,
             1,
             "L"
@@ -157,7 +157,7 @@ class SuratKeputusanController extends Controller
         $pdf->Cell(
             70,
             5,
-            "mengikuti agenda pemilihan guru tingkat Kecamatan/korwil.",
+            " penghargaan beserta bonus.",
             0,
             1,
             "L"
@@ -194,7 +194,7 @@ class SuratKeputusanController extends Controller
         $pdf->SetFont("Times", "BU", "12");
         $pdf->Cell(328, 60, "SITI MASTIAROH,S.Ag", 0, 1, "C");
         $pdf->SetFont("Times", "", "12");
-        $pdf->Cell(327, -50, "NIP:196306211984101010", 0, 1, "C");
+        $pdf->Cell(327, -50, "NIP:196925121993032000", 0, 1, "C");
 
         $pdf->Output();
         exit();
@@ -335,7 +335,7 @@ class SuratKeputusanController extends Controller
         $pdf->SetFont("Times", "BU", "12");
        $pdf->Cell(328, 60, "SITI MASTIAROH,S.Ag", 0, 1, "C");
         $pdf->SetFont("Times", "", "12");
-        $pdf->Cell(327, -50, "NIP:196306211984101010", 0, 1, "C");
+        $pdf->Cell(327, -50, "NIP:196925121993032000", 0, 1, "C");
 
         $pdf->Output();
         exit();
