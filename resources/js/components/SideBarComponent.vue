@@ -5,7 +5,7 @@
         <!-- Brand Logo -->
 
         <router-link to="/dashboard" class="brand-link">
-            <img src="/images/sekolah_logo.png" class="brand-image" />
+            <img alt="logo" src="/images/sekolah_logo.png" class="brand-image" />
 
             <span class="brand-text font-weight-bold">AL-HUSNA</span>
         </router-link>

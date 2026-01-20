@@ -48,10 +48,7 @@
                                 <i class="ion ion-stats-bars"></i>
                             </div>
 
-                            <router-link
-                                to="/alternatif"
-                                class="small-box-footer"
-                            >
+                            <router-link to="/alternatif" class="small-box-footer">
                                 More info
                                 <i class="fas fa-arrow-circle-right"></i>
                             </router-link>
@@ -74,10 +71,7 @@
                                 <i class="ion ion-person-add"></i>
                             </div>
 
-                            <router-link
-                                to="/kriteria"
-                                class="small-box-footer"
-                            >
+                            <router-link to="/kriteria" class="small-box-footer">
                                 More info
                                 <i class="fas fa-arrow-circle-right"></i>
                             </router-link>
@@ -100,10 +94,7 @@
                                 <i class="ion ion-pie-graph"></i>
                             </div>
 
-                            <router-link
-                                to="/penilaian"
-                                class="small-box-footer"
-                            >
+                            <router-link to="/penilaian" class="small-box-footer">
                                 More info
                                 <i class="fas fa-arrow-circle-right"></i>
                             </router-link>
@@ -113,10 +104,7 @@
 
                 <!-- /.row -->
 
-                <div
-                    class="row row-timeline"
-                    style="max-height: 400px; overflow-y: auto"
-                >
+                <div class="row row-timeline" style="max-height: 400px; overflow-y: auto">
                     <div class="col-lg-12 mx-auto">
                         <!-- <h5>
                             <b>Sistem Penunjang Keputusan</b>
@@ -125,11 +113,8 @@
                         <!-- Timeline -->
 
                         <ul class="timeline">
-                            <li
-                                class="timeline-item bg-white rounded ml-3 px-4 pt-4 pb-5 shadow"
-                                v-for="ar in artikel"
-                                v-bind:key="ar.id"
-                            >
+                            <li class="timeline-item bg-white rounded ml-3 px-4 pt-4 pb-5 shadow" v-for="ar in artikel"
+                                v-bind:key="ar.id">
                                 <div class="timeline-arrow"></div>
 
                                 <h2 class="h5 mb-0">
@@ -141,14 +126,8 @@
                                     : {{ ar.tanggal_terbit }}
                                 </span>
 
-                                <read-more
-                                    class="mt-2"
-                                    more-str="Baca Selengkapnya"
-                                    :text="ar.konten"
-                                    link="#"
-                                    less-str="Baca Singkat"
-                                    :max-chars="250"
-                                ></read-more>
+                                <read-more class="mt-2" more-str="Baca Selengkapnya" :text="ar.konten" link="#"
+                                    less-str="Baca Singkat" :max-chars="250"></read-more>
 
                                 <div class="float-right">
                                     <p>
@@ -157,10 +136,7 @@
                                         |
                                         <b>Sumber : </b>
 
-                                        <a
-                                            v-bind:href="ar.link"
-                                            target="_blank"
-                                        >
+                                        <a v-bind:href="ar.link" target="_blank">
                                             {{ ar.penerbit }}
                                         </a>
                                     </p>

@@ -58,10 +58,8 @@
 
                                     </a> -->
 
-                                    <router-link
-                                        class="btn btn-success px-5 float-right mb-3"
-                                        :to="{ name: 'tambah-alternatif' }"
-                                    >
+                                    <router-link class="btn btn-success px-5 float-right mb-3"
+                                        :to="{ name: 'tambah-alternatif' }">
                                         Tambah Data
                                     </router-link>
                                 </div>
@@ -75,14 +73,14 @@
                                 </div>
 
                                 <div class="table-responsive" v-else>
-                                    <table
-                                        class="table table-bordered table-striped text-center"
-                                    >
+                                    <table class="table table-bordered table-striped text-center">
                                         <thead class="thead-white">
                                             <tr>
                                                 <th>#</th>
 
                                                 <th>Kode</th>
+
+                                                <th>NIP</th>
 
                                                 <th>Nama</th>
 
@@ -93,24 +91,21 @@
                                         </thead>
 
                                         <tbody>
-                                            <tr
-                                                v-for="(
-                                                    al, index
-                                                ) in alternatif"
-                                            >
+                                            <tr v-bind:key="al.id" v-for="(
+al, index
+                                                ) in alternatif">
                                                 <td>{{ index + 1 }}</td>
 
                                                 <td>{{ al.kode_guru }}</td>
+                                                <td>{{ al.nip }}</td>
 
                                                 <td>
-                                                    <router-link
-                                                        :to="{
-                                                            name: 'detail-alternatif',
-                                                            params: {
-                                                                kode: al.kode_guru,
-                                                            },
-                                                        }"
-                                                    >
+                                                    <router-link :to="{
+                                                        name: 'detail-alternatif',
+                                                        params: {
+                                                            kode: al.kode_guru,
+                                                        },
+                                                    }">
                                                         {{ al.nama }}
                                                     </router-link>
                                                 </td>
@@ -118,36 +113,22 @@
                                                 <td>{{ al.jenis_kelamin }}</td>
 
                                                 <td>
-                                                    <div
-                                                        class="btn-group"
-                                                        role="group"
-                                                        aria-label="Basic example"
-                                                    >
-                                                        <router-link
-                                                            class="btn btn-outline-dark btn-sm"
-                                                            :to="{
-                                                                name: 'edit-alternatif',
-                                                                params: {
-                                                                    kode: al.kode_guru,
-                                                                },
-                                                            }"
-                                                        >
-                                                            <i
-                                                                class="fas fa-edit"
-                                                            ></i>
+                                                    <div class="btn-group" role="group" aria-label="Basic example">
+                                                        <router-link class="btn btn-outline-dark btn-sm" :to="{
+                                                            name: 'edit-alternatif',
+                                                            params: {
+                                                                kode: al.kode_guru,
+                                                            },
+                                                        }">
+                                                            <i class="fas fa-edit"></i>
                                                         </router-link>
 
-                                                        <a
-                                                            class="btn btn-outline-dark btn-sm"
-                                                            @click.prevent="
-                                                                deleteAlternatif(
-                                                                    al.kode_guru
-                                                                )
-                                                            "
-                                                        >
-                                                            <i
-                                                                class="fas fa-trash"
-                                                            ></i>
+                                                        <a class="btn btn-outline-dark btn-sm" @click.prevent="
+                                                            deleteAlternatif(
+                                                                al.kode_guru
+                                                            )
+                                                            ">
+                                                            <i class="fas fa-trash"></i>
                                                         </a>
                                                     </div>
                                                 </td>

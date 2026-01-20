@@ -22,10 +22,13 @@ class PerbandinganController extends Controller
 
     public function simpan_perbandingan(Request $request)
     {
-        $validation = Validator::make($request->all(), [
-            "baris" => "required",
-            "kolom" => "required",
-        ]);
+       $validation = Validator::make($request->all(), [
+    'baris' => 'required|array',
+    'baris.*' => 'required|string|not_in:""',
+    'kolom' => 'required|array',
+    'kolom.*' => 'required|string|not_in:""',
+]);
+
 
         if ($validation->fails()) {
             $data = [
@@ -34,6 +37,17 @@ class PerbandinganController extends Controller
             ];
             return response()->json($data, 422);
         }
+
+        if (
+    collect($request->baris)->contains(fn ($v) => trim($v) === '') ||
+    collect($request->kolom)->contains(fn ($v) => trim($v) === '')
+) {
+    return response()->json([
+        'status' => false,
+        'message' => 'Perbandingan Antar Kriteria harus terisi lengkap, tidak boleh ada nilai kosong',
+    ], 422);
+}
+
 
         $kriteria = DB::table("kriteria")
             ->select("kode_kriteria")

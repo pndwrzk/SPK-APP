@@ -57,12 +57,7 @@
                         </h3>
 
                         <div class="card-tools">
-                            <button
-                                type="button"
-                                class="btn btn-tool"
-                                data-card-widget="collapse"
-                                title="Collapse"
-                            >
+                            <button type="button" class="btn btn-tool" data-card-widget="collapse" title="Collapse">
                                 <i class="fas fa-minus"></i>
                             </button>
                         </div>
@@ -215,9 +210,7 @@
                 <div class="card">
                     <div class="table-responsive">
                         <form @submit.prevent="submitBarisKolom()">
-                            <table
-                                class="table table-borderles table-striped text-center"
-                            >
+                            <table class="table table-borderles table-striped text-center">
                                 <thead class="thead-white">
                                     <tr>
                                         <th>Kriteria</th>
@@ -229,74 +222,40 @@
                                 </thead>
 
                                 <tbody>
-                                    <tr v-for="(bk, index) in bariskolom">
+                                    <tr v-bind:key="index" v-for="(bk, index) in bariskolom">
                                         <th>{{ bk.baris }}</th>
 
                                         <td v-if="bk.baris == bk.kolom">
                                             <div class="input-group mb-3">
-                                                <input
-                                                    type="number"
-                                                    name="baris[]"
-                                                    class="form-control text-center bg-white"
-                                                    min="1"
-                                                    max="9"
-                                                    value="1"
-                                                    readonly
-                                                    style="width: 20px"
-                                                />
+                                                <input type="number" name="baris[]"
+                                                    class="form-control text-center bg-white" min="1" max="9" value="1"
+                                                    readonly style="width: 20px" />
 
-                                                <div
-                                                    class="input-group-prepend"
-                                                >
-                                                    <span
-                                                        class="input-group-text"
-                                                    >
+                                                <div class="input-group-prepend">
+                                                    <span class="input-group-text">
                                                         Banding
                                                     </span>
                                                 </div>
 
-                                                <input
-                                                    type="number"
-                                                    name="kolom[]"
-                                                    class="form-control text-center bg-white"
-                                                    value="1"
-                                                    min="1"
-                                                    max="9"
-                                                    readonly
-                                                    style="width: 20px"
-                                                />
+                                                <input type="number" name="kolom[]"
+                                                    class="form-control text-center bg-white" value="1" min="1" max="9"
+                                                    readonly style="width: 20px" />
                                             </div>
                                         </td>
 
                                         <td v-else>
                                             <div class="input-group mb-3">
-                                                <input
-                                                    type="number"
-                                                    name="baris[]"
-                                                    class="form-control text-center"
-                                                    style="width: 20px"
-                                                    min="1"
-                                                    max="9"
-                                                />
+                                                <input type="number" name="baris[]" class="form-control text-center"
+                                                    style="width: 20px" min="1" max="9" />
 
-                                                <div
-                                                    class="input-group-prepend"
-                                                >
-                                                    <span
-                                                        class="input-group-text"
-                                                    >
+                                                <div class="input-group-prepend">
+                                                    <span class="input-group-text">
                                                         Banding
                                                     </span>
                                                 </div>
 
-                                                <input
-                                                    type="number"
-                                                    name="kolom[]"
-                                                    class="form-control text-center"
-                                                    style="width: 20px"
-                                                    min="1"
-                                                    max="9"
-                                                />
+                                                <input type="number" name="kolom[]" class="form-control text-center"
+                                                    style="width: 20px" min="1" max="9" />
                                             </div>
                                         </td>
 
@@ -306,16 +265,8 @@
                             </table>
 
                             <div class="p-4">
-                                <button
-                                    type="submit"
-                                    class="btn btn-success"
-                                    style="width: 100%"
-                                    :disabled="disabled"
-                                >
-                                    <i
-                                        v-show="loading"
-                                        class="fa fa-spinner fa-spin"
-                                    ></i>
+                                <button type="submit" class="btn btn-success" style="width: 100%" :disabled="disabled">
+                                    <i v-show="loading" class="fa fa-spinner fa-spin"></i>
                                     Simpan
                                 </button>
                             </div>

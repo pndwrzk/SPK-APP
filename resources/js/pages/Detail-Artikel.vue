@@ -11,9 +11,7 @@
                     <div class="col-sm-6">
                         <ol class="breadcrumb float-sm-right">
                             <li class="breadcrumb-item">
-                                <router-link to="/dashboard"
-                                    >Dashboard</router-link
-                                >
+                                <router-link to="/dashboard">Dashboard</router-link>
                             </li>
                             <li class="breadcrumb-item">
                                 <router-link to="/artikel">Artikel</router-link>
@@ -40,7 +38,7 @@
                                 <td>
                                     <a v-bind:href="detailartikel.link">{{
                                         detailartikel.penerbit
-                                    }}</a>
+                                        }}</a>
                                 </td>
                             </tr>
                             <tr>
@@ -61,10 +59,8 @@
                         </table>
 
                         <div class="row mt-4 ">
-                            <router-link class=" text-dark" to="/artikel"
-                                ><i class="fas fa-chevron-left"></i>
-                                <strong>Kembali</strong></router-link
-                            >
+                            <router-link class=" text-dark" to="/artikel"><i class="fas fa-chevron-left"></i>
+                                <strong>Kembali</strong></router-link>
                         </div>
                     </div>
                 </div>

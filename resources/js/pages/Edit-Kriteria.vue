@@ -25,7 +25,7 @@
                             <li class="breadcrumb-item">
 
                                 <router-link to="/dashboard">
-                                     Dashboard
+                                    Dashboard
                                 </router-link>
 
                             </li>
@@ -33,13 +33,13 @@
                             <li class="breadcrumb-item">
 
                                 <router-link to="/kriteria">
-                                     Kriteria
+                                    Kriteria
                                 </router-link>
 
                             </li>
 
                             <li class="breadcrumb-item active">
-                                 Edit Kriteria
+                                Edit Kriteria
                             </li>
 
                         </ol>
@@ -64,41 +64,24 @@
 
                     <div class="card-body">
 
-                        <form
-                            class="form-horizontal"
-                            method="POST"
-                            @submit.prevent="handleUpdate"
-                        >
+                        <form class="form-horizontal" method="POST" @submit.prevent="handleUpdate">
 
                             <div class="form-group row">
 
-                                <label
-                                    for="inputNama"
-                                    class="col-sm-2 col-form-label"
-                                >
-                                     Nama
+                                <label for="inputNama" class="col-sm-2 col-form-label">
+                                    Nama
                                 </label>
 
                                 <div class="col-sm-10">
 
-                                    <input
-                                        type="text"
-                                        class="form-control"
-                                        v-bind:class="{
-                                            'is-invalid': errors.nama
-                                        }"
-                                        v-model="form.nama"
-                                        id="inputNama"
-                                        placeholder="Nama"
-                                    />
+                                    <input type="text" class="form-control" v-bind:class="{
+                                        'is-invalid': errors.nama
+                                    }" v-model="form.nama" id="inputNama" placeholder="Nama" />
 
-                                    <div
-                                        v-if="errors.nama"
-                                        v-bind:class="{
-                                            'invalid-feedback': errors.nama
-                                        }"
-                                    >
-                                         {{ errors.nama[0] }}
+                                    <div v-if="errors.nama" v-bind:class="{
+                                        'invalid-feedback': errors.nama
+                                    }">
+                                        {{ errors.nama[0] }}
                                     </div>
 
                                 </div>
@@ -107,75 +90,50 @@
 
                             <div class="form-group row">
 
-                                <label
-                                    for="inputatribut"
-                                    class="col-sm-2 col-form-label"
-                                >
-                                     Atribut
+                                <label for="inputatribut" class="col-sm-2 col-form-label">
+                                    Atribut
                                 </label>
 
                                 <div class="col-sm-10">
 
-                                    <select
-                                        class="form-control"
-                                        v-bind:class="{
-                                            'is-invalid': errors.atribut
-                                        }"
-                                        id="inputatribut"
-                                    >
+                                    <select class="form-control" v-bind:class="{
+                                        'is-invalid': errors.atribut
+                                    }" id="inputatribut">
 
-                                        <option
-                                            value="benefit"
-                                            v-if="form.atribut === 'benefit'"
-                                            selected
-                                        >
-                                             benefit
+                                        <option value="benefit" v-if="form.atribut === 'benefit'" selected>
+                                            benefit
                                         </option>
 
                                         <option value="benefit" v-else>
-                                             benefit
+                                            benefit
                                         </option>
 
-                                        <option
-                                            value="cost"
-                                            v-if="form.atribut === 'cost'"
-                                            selected
-                                        >
-                                             cost
+                                        <option value="cost" v-if="form.atribut === 'cost'" selected>
+                                            cost
                                         </option>
 
                                         <option v-else value="cost">
-                                             cost
+                                            cost
                                         </option>
 
                                     </select>
 
-                                    <div
-                                        v-if="errors.atribut"
-                                        v-bind:class="{
-                                            'invalid-feedback': errors.atribut
-                                        }"
-                                    >
-                                         {{ errors.atribut[0] }}
+                                    <div v-if="errors.atribut" v-bind:class="{
+                                        'invalid-feedback': errors.atribut
+                                    }">
+                                        {{ errors.atribut[0] }}
                                     </div>
 
                                 </div>
 
                             </div>
 
-                          
 
-                            <button
-                                type="submit"
-                                class="btn btn-success mt-3 float-right"
-                                :disabled="disabled"
-                            >
 
-                                <i
-                                    v-show="loading"
-                                    class="fa fa-spinner fa-spin"
-                                ></i>
-                                 Simpan
+                            <button type="submit" class="btn btn-success mt-3 float-right" :disabled="disabled">
+
+                                <i v-show="loading" class="fa fa-spinner fa-spin"></i>
+                                Simpan
                             </button>
 
                         </form>
@@ -217,9 +175,9 @@ export default {
             disabled: false,
             form: {
                 nama: "",
-             
+
                 atribut: "",
-             
+
             },
             errors: {}
         };
@@ -262,4 +220,3 @@ export default {
     }
 };
 </script>
-

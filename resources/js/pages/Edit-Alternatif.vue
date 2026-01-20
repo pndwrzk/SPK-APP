@@ -25,7 +25,7 @@
                             <li class="breadcrumb-item">
 
                                 <router-link to="/dashboard">
-                                     Dashboard
+                                    Dashboard
                                 </router-link>
 
                             </li>
@@ -33,13 +33,13 @@
                             <li class="breadcrumb-item">
 
                                 <router-link to="/alternatif">
-                                     Alternatif
+                                    Alternatif
                                 </router-link>
 
                             </li>
 
                             <li class="breadcrumb-item active">
-                                 Edit Alternatif
+                                Edit Alternatif
                             </li>
 
                         </ol>
@@ -64,41 +64,24 @@
 
                     <div class="card-body">
 
-                        <form
-                            class="form-horizontal"
-                            method="POST"
-                            @submit.prevent="handleUpdate"
-                        >
+                        <form class="form-horizontal" method="POST" @submit.prevent="handleUpdate">
 
                             <div class="form-group row">
 
-                                <label
-                                    for="inputnip"
-                                    class="col-sm-2 col-form-label"
-                                >
-                                     NIP
+                                <label for="inputnip" class="col-sm-2 col-form-label">
+                                    NIP
                                 </label>
 
                                 <div class="col-sm-10">
 
-                                    <input
-                                        type="text"
-                                        class="form-control"
-                                        v-bind:class="{
-                                            'is-invalid': errors.nip
-                                        }"
-                                        v-model="form.nip"
-                                        id="inputnip"
-                                        placeholder="NIP"
-                                    />
+                                    <input type="text" class="form-control" v-bind:class="{
+                                        'is-invalid': errors.nip
+                                    }" v-model="form.nip" id="inputnip" placeholder="NIP" />
 
-                                    <div
-                                        v-if="errors.nip"
-                                        v-bind:class="{
-                                            'invalid-feedback': errors.nip
-                                        }"
-                                    >
-                                         {{ errors.nip[0] }}
+                                    <div v-if="errors.nip" v-bind:class="{
+                                        'invalid-feedback': errors.nip
+                                    }">
+                                        {{ errors.nip[0] }}
                                     </div>
 
                                 </div>
@@ -107,33 +90,20 @@
 
                             <div class="form-group row">
 
-                                <label
-                                    for="inputNama"
-                                    class="col-sm-2 col-form-label"
-                                >
-                                     Nama
+                                <label for="inputNama" class="col-sm-2 col-form-label">
+                                    Nama
                                 </label>
 
                                 <div class="col-sm-10">
 
-                                    <input
-                                        type="text"
-                                        class="form-control"
-                                        v-bind:class="{
-                                            'is-invalid': errors.nama
-                                        }"
-                                        v-model="form.nama"
-                                        id="inputNama"
-                                        placeholder="Nama Lengkap"
-                                    />
+                                    <input type="text" class="form-control" v-bind:class="{
+                                        'is-invalid': errors.nama
+                                    }" v-model="form.nama" id="inputNama" placeholder="Nama Lengkap" />
 
-                                    <div
-                                        v-if="errors.nama"
-                                        v-bind:class="{
-                                            'invalid-feedback': errors.nama
-                                        }"
-                                    >
-                                         {{ errors.nama[0] }}
+                                    <div v-if="errors.nama" v-bind:class="{
+                                        'invalid-feedback': errors.nama
+                                    }">
+                                        {{ errors.nama[0] }}
                                     </div>
 
                                 </div>
@@ -142,42 +112,31 @@
 
                             <div class="form-group row">
 
-                                <label
-                                    for="inputjenis_kelamin"
-                                    class="col-sm-2 col-form-label"
-                                >
-                                     Jenis Kelamin
+                                <label for="inputjenis_kelamin" class="col-sm-2 col-form-label">
+                                    Jenis Kelamin
                                 </label>
 
                                 <div class="col-sm-10">
 
-                                    <select
-                                        class="form-control"
-                                        v-bind:class="{
-                                            'is-invalid': errors.jenis_kelamin
-                                        }"
-                                        v-model="form.jenis_kelamin"
-                                        id="inputjenis_kelamin"
-                                    >
+                                    <select class="form-control" v-bind:class="{
+                                        'is-invalid': errors.jenis_kelamin
+                                    }" v-model="form.jenis_kelamin" id="inputjenis_kelamin">
 
                                         <option value="Laki-laki">
-                                             Laki-laki
+                                            Laki-laki
                                         </option>
 
                                         <option value="Perempuan">
-                                             Perempuan
+                                            Perempuan
                                         </option>
 
                                     </select>
 
-                                    <div
-                                        v-if="errors.jenis_kelamin"
-                                        v-bind:class="{
-                                            'invalid-feedback':
-                                                errors.jenis_kelamin
-                                        }"
-                                    >
-                                         {{ errors.jenis_kelamin[0] }}
+                                    <div v-if="errors.jenis_kelamin" v-bind:class="{
+                                        'invalid-feedback':
+                                            errors.jenis_kelamin
+                                    }">
+                                        {{ errors.jenis_kelamin[0] }}
                                     </div>
 
                                 </div>
@@ -186,34 +145,22 @@
 
                             <div class="form-group row">
 
-                                <label
-                                    for="inputtempat_lahir"
-                                    class="col-sm-2 col-form-label"
-                                >
-                                     Tempat Lahir
+                                <label for="inputtempat_lahir" class="col-sm-2 col-form-label">
+                                    Tempat Lahir
                                 </label>
 
                                 <div class="col-sm-10">
 
-                                    <input
-                                        type="text"
-                                        class="form-control"
-                                        v-bind:class="{
-                                            'is-invalid': errors.tempat_lahir
-                                        }"
-                                        v-model="form.tempat_lahir"
-                                        id="inputtempat_lahir"
-                                        placeholder="Tempat Lahir"
-                                    />
+                                    <input type="text" class="form-control" v-bind:class="{
+                                        'is-invalid': errors.tempat_lahir
+                                    }" v-model="form.tempat_lahir" id="inputtempat_lahir"
+                                        placeholder="Tempat Lahir" />
 
-                                    <div
-                                        v-if="errors.tempat_lahir"
-                                        v-bind:class="{
-                                            'invalid-feedback':
-                                                errors.tempat_lahir
-                                        }"
-                                    >
-                                         {{ errors.tempat_lahir[0] }}
+                                    <div v-if="errors.tempat_lahir" v-bind:class="{
+                                        'invalid-feedback':
+                                            errors.tempat_lahir
+                                    }">
+                                        {{ errors.tempat_lahir[0] }}
                                     </div>
 
                                 </div>
@@ -222,51 +169,32 @@
 
                             <div class="form-group row">
 
-                                <label
-                                    for="inputtanggal_lahir"
-                                    class="col-sm-2 col-form-label"
-                                >
-                                     Tanggal Lahir
+                                <label for="inputtanggal_lahir" class="col-sm-2 col-form-label">
+                                    Tanggal Lahir
                                 </label>
 
                                 <div class="col-sm-10">
 
-                                    <input
-                                        type="date"
-                                        class="form-control"
-                                        v-bind:class="{
-                                            'is-invalid': errors.tanggal_lahir
-                                        }"
-                                        v-model="form.tanggal_lahir"
-                                        id="inputtanggal_lahir"
-                                        placeholder="tanggal_lahir"
-                                    />
+                                    <input type="date" class="form-control" v-bind:class="{
+                                        'is-invalid': errors.tanggal_lahir
+                                    }" v-model="form.tanggal_lahir" id="inputtanggal_lahir"
+                                        placeholder="tanggal_lahir" />
 
-                                    <div
-                                        v-if="errors.tanggal_lahir"
-                                        v-bind:class="{
-                                            'invalid-feedback':
-                                                errors.tanggal_lahir
-                                        }"
-                                    >
-                                         {{ errors.tanggal_lahir[0] }}
+                                    <div v-if="errors.tanggal_lahir" v-bind:class="{
+                                        'invalid-feedback':
+                                            errors.tanggal_lahir
+                                    }">
+                                        {{ errors.tanggal_lahir[0] }}
                                     </div>
 
                                 </div>
 
                             </div>
 
-                            <button
-                                type="submit"
-                                class="btn btn-success mt-3 float-right"
-                                :disabled="disabled"
-                            >
+                            <button type="submit" class="btn btn-success mt-3 float-right" :disabled="disabled">
 
-                                <i
-                                    v-show="loading"
-                                    class="fa fa-spinner fa-spin"
-                                ></i>
-                                 Simpan
+                                <i v-show="loading" class="fa fa-spinner fa-spin"></i>
+                                Simpan
                             </button>
 
                         </form>
@@ -356,4 +284,3 @@ export default {
     }
 };
 </script>
-

@@ -3926,6 +3926,7 @@ var render = function render() {
   }, [_c("img", {
     staticClass: "brand-image",
     attrs: {
+      alt: "logo",
       src: "/images/sekolah_logo.png"
     }
   }), _vm._v(" "), _c("span", {
@@ -4100,7 +4101,7 @@ var render = function render() {
     attrs: {
       to: "dashboard"
     }
-  }, [_vm._v("\n                                Dashboard\n                            ")])], 1), _vm._v(" "), _c("li", {
+  }, [_vm._v("\n                                    Dashboard\n                                ")])], 1), _vm._v(" "), _c("li", {
     staticClass: "breadcrumb-item active"
   }, [_vm._v("Alternatif")])])])])])]), _vm._v(" "), _c("section", {
     staticClass: "content"
@@ -4123,12 +4124,14 @@ var render = function render() {
         name: "tambah-alternatif"
       }
     }
-  }, [_vm._v("\n                                    Tambah Data\n                                ")])], 1), _vm._v(" "), _vm.alternatif.length == 0 ? _c("div", {}, [_vm._m(1), _vm._v("\n                                Data Alternatif (Guru) tidak tersedia\n                            ")]) : _c("div", {
+  }, [_vm._v("\n                                        Tambah Data\n                                    ")])], 1), _vm._v(" "), _vm.alternatif.length == 0 ? _c("div", {}, [_vm._m(1), _vm._v("\n                                    Data Alternatif (Guru) tidak tersedia\n                                ")]) : _c("div", {
     staticClass: "table-responsive"
   }, [_c("table", {
     staticClass: "table table-bordered table-striped text-center"
   }, [_vm._m(2), _vm._v(" "), _c("tbody", _vm._l(_vm.alternatif, function (al, index) {
-    return _c("tr", [_c("td", [_vm._v(_vm._s(index + 1))]), _vm._v(" "), _c("td", [_vm._v(_vm._s(al.kode_guru))]), _vm._v(" "), _c("td", [_c("router-link", {
+    return _c("tr", {
+      key: al.id
+    }, [_c("td", [_vm._v(_vm._s(index + 1))]), _vm._v(" "), _c("td", [_vm._v(_vm._s(al.kode_guru))]), _vm._v(" "), _c("td", [_vm._v(_vm._s(al.nip))]), _vm._v(" "), _c("td", [_c("router-link", {
       attrs: {
         to: {
           name: "detail-alternatif",
@@ -4137,7 +4140,7 @@ var render = function render() {
           }
         }
       }
-    }, [_vm._v("\n                                                    " + _vm._s(al.nama) + "\n                                                ")])], 1), _vm._v(" "), _c("td", [_vm._v(_vm._s(al.jenis_kelamin))]), _vm._v(" "), _c("td", [_c("div", {
+    }, [_vm._v("\n                                                        " + _vm._s(al.nama) + "\n                                                    ")])], 1), _vm._v(" "), _c("td", [_vm._v(_vm._s(al.jenis_kelamin))]), _vm._v(" "), _c("td", [_c("div", {
       staticClass: "btn-group",
       attrs: {
         role: "group",
@@ -4179,13 +4182,13 @@ var staticRenderFns = [function () {
     _c = _vm._self._c;
   return _c("h5", [_c("i", {
     staticClass: "fas fa-info"
-  }), _vm._v("\n                                    Info:\n                                ")]);
+  }), _vm._v("\n                                        Info:\n                                    ")]);
 }, function () {
   var _vm = this,
     _c = _vm._self._c;
   return _c("thead", {
     staticClass: "thead-white"
-  }, [_c("tr", [_c("th", [_vm._v("#")]), _vm._v(" "), _c("th", [_vm._v("Kode")]), _vm._v(" "), _c("th", [_vm._v("Nama")]), _vm._v(" "), _c("th", [_vm._v("Jenis Kelamin")]), _vm._v(" "), _c("th", [_vm._v("Opsi")])])]);
+  }, [_c("tr", [_c("th", [_vm._v("#")]), _vm._v(" "), _c("th", [_vm._v("Kode")]), _vm._v(" "), _c("th", [_vm._v("NIP")]), _vm._v(" "), _c("th", [_vm._v("Nama")]), _vm._v(" "), _c("th", [_vm._v("Jenis Kelamin")]), _vm._v(" "), _c("th", [_vm._v("Opsi")])])]);
 }];
 render._withStripped = true;
 
@@ -4253,7 +4256,9 @@ var render = function render() {
   }, [_c("table", {
     staticClass: "table table-bordered table-striped text-center"
   }, [_vm._m(1), _vm._v(" "), _c("tbody", _vm._l(_vm.artikel, function (ar, index) {
-    return _c("tr", [_c("td", [_vm._v(_vm._s(index + 1))]), _vm._v(" "), _c("td", [_c("a", {
+    return _c("tr", {
+      key: ar.kode
+    }, [_c("td", [_vm._v(_vm._s(index + 1))]), _vm._v(" "), _c("td", [_c("a", {
       attrs: {
         href: ar.link,
         target: "_blank"
@@ -4381,7 +4386,9 @@ var render = function render() {
   }, [_c("table", {
     staticClass: "table table-borderles table-striped text-center"
   }, [_vm._m(3), _vm._v(" "), _c("tbody", _vm._l(_vm.bariskolom, function (bk, index) {
-    return _c("tr", [_c("th", [_vm._v(_vm._s(bk.baris))]), _vm._v(" "), bk.baris == bk.kolom ? _c("td", [_vm._m(4, true)]) : _c("td", [_vm._m(5, true)]), _vm._v(" "), _c("th", [_vm._v(_vm._s(bk.kolom))])]);
+    return _c("tr", {
+      key: index
+    }, [_c("th", [_vm._v(_vm._s(bk.baris))]), _vm._v(" "), bk.baris == bk.kolom ? _c("td", [_vm._m(4, true)]) : _c("td", [_vm._m(5, true)]), _vm._v(" "), _c("th", [_vm._v(_vm._s(bk.kolom))])]);
   }), 0)]), _vm._v(" "), _c("div", {
     staticClass: "p-4"
   }, [_c("button", {
@@ -4707,15 +4714,15 @@ var render = function render() {
     attrs: {
       to: "/dashboard"
     }
-  }, [_vm._v("\n                                 Dashboard\n                            ")])], 1), _vm._v(" "), _c("li", {
+  }, [_vm._v("\n                                Dashboard\n                            ")])], 1), _vm._v(" "), _c("li", {
     staticClass: "breadcrumb-item"
   }, [_c("router-link", {
     attrs: {
       to: "/alternatif"
     }
-  }, [_vm._v("\n                                 Alternatif\n                            ")])], 1), _vm._v(" "), _c("li", {
+  }, [_vm._v("\n                                Alternatif\n                            ")])], 1), _vm._v(" "), _c("li", {
     staticClass: "breadcrumb-item active"
-  }, [_vm._v("\n                             Detail Alternatif\n                        ")])])])])])]), _vm._v(" "), _c("section", {
+  }, [_vm._v("\n                            Detail Alternatif\n                        ")])])])])])]), _vm._v(" "), _c("section", {
     staticClass: "content"
   }, [_c("div", {
     staticClass: "container-fluid"
@@ -4859,15 +4866,15 @@ var render = function render() {
     attrs: {
       to: "/dashboard"
     }
-  }, [_vm._v("\n                                 Dashboard\n                            ")])], 1), _vm._v(" "), _c("li", {
+  }, [_vm._v("\n                                Dashboard\n                            ")])], 1), _vm._v(" "), _c("li", {
     staticClass: "breadcrumb-item"
   }, [_c("router-link", {
     attrs: {
       to: "/alternatif"
     }
-  }, [_vm._v("\n                                 Alternatif\n                            ")])], 1), _vm._v(" "), _c("li", {
+  }, [_vm._v("\n                                Alternatif\n                            ")])], 1), _vm._v(" "), _c("li", {
     staticClass: "breadcrumb-item active"
-  }, [_vm._v("\n                             Edit Alternatif\n                        ")])])])])])]), _vm._v(" "), _c("section", {
+  }, [_vm._v("\n                            Edit Alternatif\n                        ")])])])])])]), _vm._v(" "), _c("section", {
     staticClass: "content"
   }, [_c("div", {
     staticClass: "container-fluid"
@@ -4893,7 +4900,7 @@ var render = function render() {
     attrs: {
       "for": "inputnip"
     }
-  }, [_vm._v("\n                                 NIP\n                            ")]), _vm._v(" "), _c("div", {
+  }, [_vm._v("\n                                NIP\n                            ")]), _vm._v(" "), _c("div", {
     staticClass: "col-sm-10"
   }, [_c("input", {
     directives: [{
@@ -4924,14 +4931,14 @@ var render = function render() {
     "class": {
       "invalid-feedback": _vm.errors.nip
     }
-  }, [_vm._v("\n                                     " + _vm._s(_vm.errors.nip[0]) + "\n                                ")]) : _vm._e()])]), _vm._v(" "), _c("div", {
+  }, [_vm._v("\n                                    " + _vm._s(_vm.errors.nip[0]) + "\n                                ")]) : _vm._e()])]), _vm._v(" "), _c("div", {
     staticClass: "form-group row"
   }, [_c("label", {
     staticClass: "col-sm-2 col-form-label",
     attrs: {
       "for": "inputNama"
     }
-  }, [_vm._v("\n                                 Nama\n                            ")]), _vm._v(" "), _c("div", {
+  }, [_vm._v("\n                                Nama\n                            ")]), _vm._v(" "), _c("div", {
     staticClass: "col-sm-10"
   }, [_c("input", {
     directives: [{
@@ -4962,14 +4969,14 @@ var render = function render() {
     "class": {
       "invalid-feedback": _vm.errors.nama
     }
-  }, [_vm._v("\n                                     " + _vm._s(_vm.errors.nama[0]) + "\n                                ")]) : _vm._e()])]), _vm._v(" "), _c("div", {
+  }, [_vm._v("\n                                    " + _vm._s(_vm.errors.nama[0]) + "\n                                ")]) : _vm._e()])]), _vm._v(" "), _c("div", {
     staticClass: "form-group row"
   }, [_c("label", {
     staticClass: "col-sm-2 col-form-label",
     attrs: {
       "for": "inputjenis_kelamin"
     }
-  }, [_vm._v("\n                                 Jenis Kelamin\n                            ")]), _vm._v(" "), _c("div", {
+  }, [_vm._v("\n                                Jenis Kelamin\n                            ")]), _vm._v(" "), _c("div", {
     staticClass: "col-sm-10"
   }, [_c("select", {
     directives: [{
@@ -5000,22 +5007,22 @@ var render = function render() {
     attrs: {
       value: "Laki-laki"
     }
-  }, [_vm._v("\n                                         Laki-laki\n                                    ")]), _vm._v(" "), _c("option", {
+  }, [_vm._v("\n                                        Laki-laki\n                                    ")]), _vm._v(" "), _c("option", {
     attrs: {
       value: "Perempuan"
     }
-  }, [_vm._v("\n                                         Perempuan\n                                    ")])]), _vm._v(" "), _vm.errors.jenis_kelamin ? _c("div", {
+  }, [_vm._v("\n                                        Perempuan\n                                    ")])]), _vm._v(" "), _vm.errors.jenis_kelamin ? _c("div", {
     "class": {
       "invalid-feedback": _vm.errors.jenis_kelamin
     }
-  }, [_vm._v("\n                                     " + _vm._s(_vm.errors.jenis_kelamin[0]) + "\n                                ")]) : _vm._e()])]), _vm._v(" "), _c("div", {
+  }, [_vm._v("\n                                    " + _vm._s(_vm.errors.jenis_kelamin[0]) + "\n                                ")]) : _vm._e()])]), _vm._v(" "), _c("div", {
     staticClass: "form-group row"
   }, [_c("label", {
     staticClass: "col-sm-2 col-form-label",
     attrs: {
       "for": "inputtempat_lahir"
     }
-  }, [_vm._v("\n                                 Tempat Lahir\n                            ")]), _vm._v(" "), _c("div", {
+  }, [_vm._v("\n                                Tempat Lahir\n                            ")]), _vm._v(" "), _c("div", {
     staticClass: "col-sm-10"
   }, [_c("input", {
     directives: [{
@@ -5046,14 +5053,14 @@ var render = function render() {
     "class": {
       "invalid-feedback": _vm.errors.tempat_lahir
     }
-  }, [_vm._v("\n                                     " + _vm._s(_vm.errors.tempat_lahir[0]) + "\n                                ")]) : _vm._e()])]), _vm._v(" "), _c("div", {
+  }, [_vm._v("\n                                    " + _vm._s(_vm.errors.tempat_lahir[0]) + "\n                                ")]) : _vm._e()])]), _vm._v(" "), _c("div", {
     staticClass: "form-group row"
   }, [_c("label", {
     staticClass: "col-sm-2 col-form-label",
     attrs: {
       "for": "inputtanggal_lahir"
     }
-  }, [_vm._v("\n                                 Tanggal Lahir\n                            ")]), _vm._v(" "), _c("div", {
+  }, [_vm._v("\n                                Tanggal Lahir\n                            ")]), _vm._v(" "), _c("div", {
     staticClass: "col-sm-10"
   }, [_c("input", {
     directives: [{
@@ -5084,7 +5091,7 @@ var render = function render() {
     "class": {
       "invalid-feedback": _vm.errors.tanggal_lahir
     }
-  }, [_vm._v("\n                                     " + _vm._s(_vm.errors.tanggal_lahir[0]) + "\n                                ")]) : _vm._e()])]), _vm._v(" "), _c("button", {
+  }, [_vm._v("\n                                    " + _vm._s(_vm.errors.tanggal_lahir[0]) + "\n                                ")]) : _vm._e()])]), _vm._v(" "), _c("button", {
     staticClass: "btn btn-success mt-3 float-right",
     attrs: {
       type: "submit",
@@ -5098,7 +5105,7 @@ var render = function render() {
       expression: "loading"
     }],
     staticClass: "fa fa-spinner fa-spin"
-  }), _vm._v("\n                             Simpan\n                        ")])]), _vm._v(" "), _c("div", {
+  }), _vm._v("\n                            Simpan\n                        ")])]), _vm._v(" "), _c("div", {
     staticClass: "row mt-5"
   }, [_c("router-link", {
     staticClass: "text-dark",
@@ -5431,15 +5438,15 @@ var render = function render() {
     attrs: {
       to: "/dashboard"
     }
-  }, [_vm._v("\n                                 Dashboard\n                            ")])], 1), _vm._v(" "), _c("li", {
+  }, [_vm._v("\n                                Dashboard\n                            ")])], 1), _vm._v(" "), _c("li", {
     staticClass: "breadcrumb-item"
   }, [_c("router-link", {
     attrs: {
       to: "/kriteria"
     }
-  }, [_vm._v("\n                                 Kriteria\n                            ")])], 1), _vm._v(" "), _c("li", {
+  }, [_vm._v("\n                                Kriteria\n                            ")])], 1), _vm._v(" "), _c("li", {
     staticClass: "breadcrumb-item active"
-  }, [_vm._v("\n                             Edit Kriteria\n                        ")])])])])])]), _vm._v(" "), _c("section", {
+  }, [_vm._v("\n                            Edit Kriteria\n                        ")])])])])])]), _vm._v(" "), _c("section", {
     staticClass: "content"
   }, [_c("div", {
     staticClass: "container-fluid"
@@ -5465,7 +5472,7 @@ var render = function render() {
     attrs: {
       "for": "inputNama"
     }
-  }, [_vm._v("\n                                 Nama\n                            ")]), _vm._v(" "), _c("div", {
+  }, [_vm._v("\n                                Nama\n                            ")]), _vm._v(" "), _c("div", {
     staticClass: "col-sm-10"
   }, [_c("input", {
     directives: [{
@@ -5496,14 +5503,14 @@ var render = function render() {
     "class": {
       "invalid-feedback": _vm.errors.nama
     }
-  }, [_vm._v("\n                                     " + _vm._s(_vm.errors.nama[0]) + "\n                                ")]) : _vm._e()])]), _vm._v(" "), _c("div", {
+  }, [_vm._v("\n                                    " + _vm._s(_vm.errors.nama[0]) + "\n                                ")]) : _vm._e()])]), _vm._v(" "), _c("div", {
     staticClass: "form-group row"
   }, [_c("label", {
     staticClass: "col-sm-2 col-form-label",
     attrs: {
       "for": "inputatribut"
     }
-  }, [_vm._v("\n                                 Atribut\n                            ")]), _vm._v(" "), _c("div", {
+  }, [_vm._v("\n                                Atribut\n                            ")]), _vm._v(" "), _c("div", {
     staticClass: "col-sm-10"
   }, [_c("select", {
     staticClass: "form-control",
@@ -5518,24 +5525,24 @@ var render = function render() {
       value: "benefit",
       selected: ""
     }
-  }, [_vm._v("\n                                         benefit\n                                    ")]) : _c("option", {
+  }, [_vm._v("\n                                        benefit\n                                    ")]) : _c("option", {
     attrs: {
       value: "benefit"
     }
-  }, [_vm._v("\n                                         benefit\n                                    ")]), _vm._v(" "), _vm.form.atribut === "cost" ? _c("option", {
+  }, [_vm._v("\n                                        benefit\n                                    ")]), _vm._v(" "), _vm.form.atribut === "cost" ? _c("option", {
     attrs: {
       value: "cost",
       selected: ""
     }
-  }, [_vm._v("\n                                         cost\n                                    ")]) : _c("option", {
+  }, [_vm._v("\n                                        cost\n                                    ")]) : _c("option", {
     attrs: {
       value: "cost"
     }
-  }, [_vm._v("\n                                         cost\n                                    ")])]), _vm._v(" "), _vm.errors.atribut ? _c("div", {
+  }, [_vm._v("\n                                        cost\n                                    ")])]), _vm._v(" "), _vm.errors.atribut ? _c("div", {
     "class": {
       "invalid-feedback": _vm.errors.atribut
     }
-  }, [_vm._v("\n                                     " + _vm._s(_vm.errors.atribut[0]) + "\n                                ")]) : _vm._e()])]), _vm._v(" "), _c("button", {
+  }, [_vm._v("\n                                    " + _vm._s(_vm.errors.atribut[0]) + "\n                                ")]) : _vm._e()])]), _vm._v(" "), _c("button", {
     staticClass: "btn btn-success mt-3 float-right",
     attrs: {
       type: "submit",
@@ -5549,7 +5556,7 @@ var render = function render() {
       expression: "loading"
     }],
     staticClass: "fa fa-spinner fa-spin"
-  }), _vm._v("\n                             Simpan\n                        ")])]), _vm._v(" "), _c("div", {
+  }), _vm._v("\n                            Simpan\n                        ")])]), _vm._v(" "), _c("div", {
     staticClass: "row mt-5"
   }, [_c("router-link", {
     staticClass: "text-dark",
@@ -5607,15 +5614,15 @@ var render = function render() {
     attrs: {
       to: "/dashboard"
     }
-  }, [_vm._v("\n                                Dashboard\n                            ")])], 1), _vm._v(" "), _c("li", {
+  }, [_vm._v("\n                                    Dashboard\n                                ")])], 1), _vm._v(" "), _c("li", {
     staticClass: "breadcrumb-item"
   }, [_c("router-link", {
     attrs: {
       to: "/penilaian"
     }
-  }, [_vm._v("\n                                Penilaian\n                            ")])], 1), _vm._v(" "), _c("li", {
+  }, [_vm._v("\n                                    Penilaian\n                                ")])], 1), _vm._v(" "), _c("li", {
     staticClass: "breadcrumb-item active"
-  }, [_vm._v("\n                            Hasil Penilaian\n                        ")])])])])])]), _vm._v(" "), _c("section", {
+  }, [_vm._v("\n                                Hasil Penilaian\n                            ")])])])])])]), _vm._v(" "), _c("section", {
     staticClass: "content"
   }, [_c("div", {
     staticClass: "container-fluid"
@@ -5630,10 +5637,10 @@ var render = function render() {
   }, [_c("thead", {
     staticClass: "thead-white"
   }, [_c("tr", [_c("th", [_vm._v("#")]), _vm._v(" "), _c("th", [_vm._v("Nama")]), _vm._v(" "), _vm._l(_vm.hasil.kriteria, function (hk, index) {
-    return _c("th", [_vm._v("\n                                        " + _vm._s(hk.nama) + "\n                                    ")]);
+    return _c("th", [_vm._v("\n                                            " + _vm._s(hk.nama) + "\n                                        ")]);
   })], 2)]), _vm._v(" "), _c("tbody", _vm._l(_vm.hasil.guru, function (hg, index) {
     return _c("tr", [_c("td", [_vm._v(_vm._s(index + 1))]), _vm._v(" "), _c("td", [_vm._v(_vm._s(hg.nama))]), _vm._v(" "), _vm._l(_vm.hasil.nilaiAwal, function (hn, index) {
-      return hn.kode_guru == hg.kode_guru ? _c("td", [_vm._v("\n                                        " + _vm._s(hn.nilai) + "\n                                    ")]) : _vm._e();
+      return hn.kode_guru == hg.kode_guru ? _c("td", [_vm._v("\n                                            " + _vm._s(hn.nilai) + "\n                                        ")]) : _vm._e();
     })], 2);
   }), 0)])])]), _vm._v(" "), _c("div", {
     staticClass: "card"
@@ -5644,17 +5651,25 @@ var render = function render() {
   }, [_c("thead", {
     staticClass: "thead-white"
   }, [_c("tr", [_c("th", [_vm._v("#")]), _vm._v(" "), _c("th", [_vm._v("Nama")]), _vm._v(" "), _vm._l(_vm.hasil.kriteria, function (hk, index) {
-    return _c("th", [_vm._v("\n                                        " + _vm._s(hk.nama) + "\n                                    ")]);
+    return _c("th", {
+      key: index
+    }, [_vm._v("\n                                            " + _vm._s(hk.nama) + "\n                                        ")]);
   })], 2)]), _vm._v(" "), _c("tbody", [_vm._l(_vm.hasil.guru, function (hg, index) {
-    return _c("tr", [_c("td", [_vm._v(_vm._s(index + 1))]), _vm._v(" "), _c("td", [_vm._v(_vm._s(hg.nama))]), _vm._v(" "), _vm._l(_vm.hasil.nilaiMatriks, function (hn, index) {
-      return hn.kode_guru == hg.kode_guru ? _c("td", [_vm._v("\n                                        " + _vm._s(hn.nilai) + "\n                                    ")]) : _vm._e();
+    return _c("tr", {
+      key: index
+    }, [_c("td", [_vm._v(_vm._s(index + 1))]), _vm._v(" "), _c("td", [_vm._v(_vm._s(hg.nama))]), _vm._v(" "), _vm._l(_vm.hasil.nilaiMatriks, function (hn, index) {
+      return hn.kode_guru == hg.kode_guru ? _c("td", {
+        key: index
+      }, [_vm._v("\n                                            " + _vm._s(hn.nilai) + "\n                                        ")]) : _vm._e();
     })], 2);
   }), _vm._v(" "), _c("tr", [_c("th", {
     attrs: {
       colspan: "2"
     }
   }, [_vm._v("Bobot")]), _vm._v(" "), _vm._l(_vm.hasil.kriteria, function (hk, index) {
-    return _c("th", [_vm._v("\n                                        " + _vm._s(hk.bobot) + "\n                                    ")]);
+    return _c("th", {
+      key: index
+    }, [_vm._v("\n                                            " + _vm._s(hk.bobot) + "\n                                        ")]);
   })], 2)], 2)])])]), _vm._v(" "), _c("div", {
     staticClass: "card"
   }, [_vm._m(2), _vm._v(" "), _c("div", {

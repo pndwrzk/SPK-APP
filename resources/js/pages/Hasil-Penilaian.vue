@@ -50,32 +50,23 @@
                             </h3>
 
                             <div class="card-tools">
-                                <button
-                                    type="button"
-                                    class="btn btn-tool"
-                                    data-card-widget="collapse"
-                                    title="Collapse"
-                                >
+                                <button type="button" class="btn btn-tool" data-card-widget="collapse" title="Collapse">
                                     <i class="fas fa-minus"></i>
                                 </button>
                             </div>
                         </div>
 
                         <div class="card-body">
-                            <table
-                                class="table table-bordered table-striped text-center"
-                            >
+                            <table class="table table-bordered table-striped text-center">
                                 <thead class="thead-white">
                                     <tr>
                                         <th>#</th>
 
                                         <th>Nama</th>
 
-                                        <th
-                                            v-for="(
-                                                hk, index
-                                            ) in hasil.kriteria"
-                                        >
+                                        <th v-for="(
+hk, index
+                                            ) in hasil.kriteria">
                                             {{ hk.nama }}
                                         </th>
 
@@ -89,12 +80,9 @@
 
                                         <td>{{ hg.nama }}</td>
 
-                                        <td
-                                            v-for="(
-                                                hn, index
-                                            ) in hasil.nilaiAwal"
-                                            v-if="hn.kode_guru == hg.kode_guru"
-                                        >
+                                        <td v-for="(
+hn, index
+                                            ) in hasil.nilaiAwal" v-if="hn.kode_guru == hg.kode_guru">
                                             {{ hn.nilai }}
                                         </td>
 
@@ -121,49 +109,37 @@
                             </h3>
 
                             <div class="card-tools">
-                                <button
-                                    type="button"
-                                    class="btn btn-tool"
-                                    data-card-widget="collapse"
-                                    title="Collapse"
-                                >
+                                <button type="button" class="btn btn-tool" data-card-widget="collapse" title="Collapse">
                                     <i class="fas fa-minus"></i>
                                 </button>
                             </div>
                         </div>
 
                         <div class="card-body">
-                            <table
-                                class="table table-bordered table-striped text-center"
-                            >
+                            <table class="table table-bordered table-striped text-center">
                                 <thead class="thead-white">
                                     <tr>
                                         <th>#</th>
 
                                         <th>Nama</th>
 
-                                        <th
-                                            v-for="(
-                                                hk, index
-                                            ) in hasil.kriteria"
-                                        >
+                                        <th v-bind:key="index" v-for="(
+hk, index
+                                            ) in hasil.kriteria">
                                             {{ hk.nama }}
                                         </th>
                                     </tr>
                                 </thead>
 
                                 <tbody>
-                                    <tr v-for="(hg, index) in hasil.guru">
+                                    <tr v-bind:key="index" v-for="(hg, index) in hasil.guru">
                                         <td>{{ index + 1 }}</td>
 
                                         <td>{{ hg.nama }}</td>
 
-                                        <td
-                                            v-for="(
-                                                hn, index
-                                            ) in hasil.nilaiMatriks"
-                                            v-if="hn.kode_guru == hg.kode_guru"
-                                        >
+                                        <td v-bind:key="index" v-for="(
+hn, index
+                                            ) in hasil.nilaiMatriks" v-if="hn.kode_guru == hg.kode_guru">
                                             {{ hn.nilai }}
                                         </td>
                                     </tr>
@@ -171,11 +147,9 @@
                                     <tr>
                                         <th colspan="2">Bobot</th>
 
-                                        <th
-                                            v-for="(
-                                                hk, index
-                                            ) in hasil.kriteria"
-                                        >
+                                        <th v-bind:key="index" v-for="(
+hk, index
+                                            ) in hasil.kriteria">
                                             {{ hk.bobot }}
                                         </th>
                                     </tr>
@@ -207,9 +181,7 @@
                         </div>
 
                         <div class="card-body">
-                            <table
-                                class="table table-bordered table-striped text-center"
-                            >
+                            <table class="table table-bordered table-striped text-center">
                                 <thead class="thead-white">
                                     <tr>
                                         <th>#</th>

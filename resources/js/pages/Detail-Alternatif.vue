@@ -25,7 +25,7 @@
                             <li class="breadcrumb-item">
 
                                 <router-link to="/dashboard">
-                                     Dashboard
+                                    Dashboard
                                 </router-link>
 
                             </li>
@@ -33,13 +33,13 @@
                             <li class="breadcrumb-item">
 
                                 <router-link to="/alternatif">
-                                     Alternatif
+                                    Alternatif
                                 </router-link>
 
                             </li>
 
                             <li class="breadcrumb-item active">
-                                 Detail Alternatif
+                                Detail Alternatif
                             </li>
 
                         </ol>
@@ -179,4 +179,3 @@ export default {
     }
 };
 </script>
-
