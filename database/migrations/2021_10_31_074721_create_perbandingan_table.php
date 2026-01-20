@@ -20,7 +20,7 @@ class CreatePerbandinganTable extends Migration
                 ->unique();
             $table->string("kode_kriteria1", 10);
             $table->string("kode_kriteria2", 10);
-            $table->decimal("nilai", 8.2);
+            $table->decimal("nilai", 8,2);
         });
     }
 

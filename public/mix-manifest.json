@@ -1,4 +1,23 @@
 {
     "/js/app.js": "/js/app.js",
-    "/css/app.css": "/css/app.css"
+    "/images/vendor/tinymce/skins/lightgray/loader.gif?0406bcb895265a43377d60473c4423e5": "/images/vendor/tinymce/skins/lightgray/loader.gif?0406bcb895265a43377d60473c4423e5",
+    "/fonts/vendor/tinymce/skins/lightgray/tinymce.eot?b7f32c761cc0d4a73dc871320162b9b5": "/fonts/vendor/tinymce/skins/lightgray/tinymce.eot?b7f32c761cc0d4a73dc871320162b9b5",
+    "/fonts/vendor/tinymce/skins/lightgray/tinymce.woff?a820a9690a7cf2192ff46b3e9edc46d2": "/fonts/vendor/tinymce/skins/lightgray/tinymce.woff?a820a9690a7cf2192ff46b3e9edc46d2",
+    "/fonts/vendor/tinymce/skins/lightgray/tinymce.ttf?a55bdbe26000fc2ca28e876d4483f4d6": "/fonts/vendor/tinymce/skins/lightgray/tinymce.ttf?a55bdbe26000fc2ca28e876d4483f4d6",
+    "/fonts/vendor/tinymce/skins/lightgray/tinymce.svg?deb53e1c037600dd48352fe17962fc1e": "/fonts/vendor/tinymce/skins/lightgray/tinymce.svg?deb53e1c037600dd48352fe17962fc1e",
+    "/fonts/vendor/tinymce/skins/lightgray/tinymce-small.eot?dc0cabeec3bedef24494062c9744369c": "/fonts/vendor/tinymce/skins/lightgray/tinymce-small.eot?dc0cabeec3bedef24494062c9744369c",
+    "/fonts/vendor/tinymce/skins/lightgray/tinymce-small.woff?eff1de88dccf6ab889868a96af6c9a3d": "/fonts/vendor/tinymce/skins/lightgray/tinymce-small.woff?eff1de88dccf6ab889868a96af6c9a3d",
+    "/fonts/vendor/tinymce/skins/lightgray/tinymce-small.ttf?afc8a0139a615b13b36309da1c5c03d0": "/fonts/vendor/tinymce/skins/lightgray/tinymce-small.ttf?afc8a0139a615b13b36309da1c5c03d0",
+    "/fonts/vendor/tinymce/skins/lightgray/tinymce-small.svg?4d989c2c7a53e2afa18f67e279646189": "/fonts/vendor/tinymce/skins/lightgray/tinymce-small.svg?4d989c2c7a53e2afa18f67e279646189",
+    "/css/app.css": "/css/app.css",
+    "/fonts/vendor/@fortawesome/fontawesome-free/webfa-solid-900.eot?9bbb245e67a133f6e486d8d2545e14a5": "/fonts/vendor/@fortawesome/fontawesome-free/webfa-solid-900.eot?9bbb245e67a133f6e486d8d2545e14a5",
+    "/fonts/vendor/@fortawesome/fontawesome-free/webfa-solid-900.woff2?1551f4f60c37af51121f106501f69b80": "/fonts/vendor/@fortawesome/fontawesome-free/webfa-solid-900.woff2?1551f4f60c37af51121f106501f69b80",
+    "/fonts/vendor/@fortawesome/fontawesome-free/webfa-solid-900.woff?eeccf4f66002c6f2ba24d3d22f2434c2": "/fonts/vendor/@fortawesome/fontawesome-free/webfa-solid-900.woff?eeccf4f66002c6f2ba24d3d22f2434c2",
+    "/fonts/vendor/@fortawesome/fontawesome-free/webfa-solid-900.ttf?be9ee23c0c6390141475d519c2c5fb8f": "/fonts/vendor/@fortawesome/fontawesome-free/webfa-solid-900.ttf?be9ee23c0c6390141475d519c2c5fb8f",
+    "/fonts/vendor/@fortawesome/fontawesome-free/webfa-solid-900.svg?7a8b4f130182d19a2d7c67d80c090397": "/fonts/vendor/@fortawesome/fontawesome-free/webfa-solid-900.svg?7a8b4f130182d19a2d7c67d80c090397",
+    "/fonts/vendor/@fortawesome/fontawesome-free/webfa-brands-400.eot?23f19bb08961f37aaf692ff943823453": "/fonts/vendor/@fortawesome/fontawesome-free/webfa-brands-400.eot?23f19bb08961f37aaf692ff943823453",
+    "/fonts/vendor/@fortawesome/fontawesome-free/webfa-brands-400.woff2?d878b0a6a1144760244ff0665888404c": "/fonts/vendor/@fortawesome/fontawesome-free/webfa-brands-400.woff2?d878b0a6a1144760244ff0665888404c",
+    "/fonts/vendor/@fortawesome/fontawesome-free/webfa-brands-400.woff?2285773e6b4b172f07d9b777c81b0775": "/fonts/vendor/@fortawesome/fontawesome-free/webfa-brands-400.woff?2285773e6b4b172f07d9b777c81b0775",
+    "/fonts/vendor/@fortawesome/fontawesome-free/webfa-brands-400.ttf?527940b104eb2ea366c8630f3f038603": "/fonts/vendor/@fortawesome/fontawesome-free/webfa-brands-400.ttf?527940b104eb2ea366c8630f3f038603",
+    "/fonts/vendor/@fortawesome/fontawesome-free/webfa-brands-400.svg?2f517e09eb2ca6650ff5bec5a95157ab": "/fonts/vendor/@fortawesome/fontawesome-free/webfa-brands-400.svg?2f517e09eb2ca6650ff5bec5a95157ab"
 }

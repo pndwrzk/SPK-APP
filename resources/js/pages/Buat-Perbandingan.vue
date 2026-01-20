@@ -308,7 +308,7 @@
                             <div class="p-4">
                                 <button
                                     type="submit"
-                                    class="btn btn-dark"
+                                    class="btn btn-success"
                                     style="width: 100%"
                                     :disabled="disabled"
                                 >

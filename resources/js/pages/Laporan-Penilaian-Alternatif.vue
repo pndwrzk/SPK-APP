@@ -90,7 +90,7 @@
                                                 <div class="col-sm-2">
                                                     <button
                                                         type="submit"
-                                                        class="btn btn-dark"
+                                                        class="btn btn-success"
                                                     >
                                                         Preview
                                                     </button>
@@ -136,7 +136,7 @@
                                 form.periode +
                                 '/export-pdf'
                             "
-                            class="btn btn-dark float-right"
+                            class="btn btn-success float-right"
                             target="_blank"
                         >
                             <i class="fas fa-print"></i>

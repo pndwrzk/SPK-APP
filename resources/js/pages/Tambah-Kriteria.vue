@@ -114,40 +114,11 @@
                                 </div>
                             </div>
 
-                            <div class="form-group row">
-                                <label
-                                    for="inputBobot"
-                                    class="col-sm-2 col-form-label"
-                                >
-                                    Bobot
-                                </label>
-
-                                <div class="col-sm-10">
-                                    <input
-                                        type="text"
-                                        class="form-control"
-                                        v-bind:class="{
-                                            'is-invalid': errors.bobot,
-                                        }"
-                                        v-model="form.bobot"
-                                        id="inputBobot"
-                                        placeholder="Bobot"
-                                    />
-
-                                    <div
-                                        v-if="errors.bobot"
-                                        v-bind:class="{
-                                            'invalid-feedback': errors.bobot,
-                                        }"
-                                    >
-                                        {{ errors.bobot[0] }}
-                                    </div>
-                                </div>
-                            </div>
+                         
 
                             <button
                                 type="submit"
-                                class="btn btn-dark mt-3 float-right"
+                                class="btn btn-success mt-3 float-right"
                                 :disabled="disabled"
                             >
                                 <i
@@ -185,7 +156,7 @@ export default {
             form: {
                 nama: "",
                 atribut: "",
-                bobot: "",
+               
             },
             errors: {},
         };

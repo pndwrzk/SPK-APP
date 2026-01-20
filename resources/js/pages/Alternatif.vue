@@ -39,7 +39,7 @@
                         <div class="card">
                             <!-- <div class="card-header bg-white">
                  <div class="div ">
-                        <button class="btn btn-dark px-3 float-right"><i class="fas fa-plus "></i></button>
+                        <button class="btn btn-success px-3 float-right"><i class="fas fa-plus "></i></button>
                   </div>
               </div> -->
 
@@ -59,7 +59,7 @@
                                     </a> -->
 
                                     <router-link
-                                        class="btn btn-dark px-5 float-right mb-3"
+                                        class="btn btn-success px-5 float-right mb-3"
                                         :to="{ name: 'tambah-alternatif' }"
                                     >
                                         Tambah Data

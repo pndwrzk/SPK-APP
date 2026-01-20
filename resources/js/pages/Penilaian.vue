@@ -43,7 +43,7 @@
                                 <div>
                                     <div>
                                         <router-link
-                                            class="btn btn-dark px-5 float-right mb-3"
+                                            class="btn btn-success px-5 float-right mb-3"
                                             :to="{ name: 'tambah-penilaian' }"
                                         >
                                             Tambah Penilaian

@@ -5,9 +5,9 @@
         <!-- Brand Logo -->
 
         <router-link to="/dashboard" class="brand-link">
-            <img src="/images/tut_wuri_handayani.png" class="brand-image" />
+            <img src="/images/sekolah_logo.png" class="brand-image" />
 
-            <span class="brand-text font-weight-bold">SDN JURUMUDI 1</span>
+            <span class="brand-text font-weight-bold">AL-HUSNA</span>
         </router-link>
 
         <!-- Sidebar -->

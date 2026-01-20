@@ -55,7 +55,7 @@
                                         </a> -->
 
                                         <router-link
-                                            class="btn btn-dark px-5 mb-3"
+                                            class="btn btn-success px-5 mb-3"
                                             :to="{ name: 'tambah-kriteria' }"
                                         >
                                             Tambah Data

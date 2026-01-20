@@ -108,7 +108,7 @@
 
                                 <router-link
                                     to="/profile-saya/ubah"
-                                    class="btn btn-dark btn-sm float-right"
+                                    class="btn btn-success btn-sm float-right"
                                 >
                                      Ubah
                                 </router-link>

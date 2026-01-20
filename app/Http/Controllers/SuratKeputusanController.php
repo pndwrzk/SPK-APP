@@ -54,51 +54,45 @@ class SuratKeputusanController extends Controller
         $sk_model = new Surat_Keputusan();
         $sk = $sk_model->getSKByKodeHasil($kode_hasil);
 
-        $pdf = new Fpdf();
+                $pdf = new Fpdf();
         $pdf->AddPage("P", "A4");
-        $pdf->Image("images/lambang_Kota_Tangerang.png", 11, 5, 31, 31);
+        $pdf->Image("images/sekolah_logo.png", 11, 5, 39, 39);
         $pdf->Cell(25);
-        $pdf->SetTextColor(61, 68, 99);
+        $pdf->SetTextColor(7, 116, 12);
+        $pdf->SetFont("Times", "", "14");
+        $pdf->Cell(0, 5, "YAYASAN PENDIDIKAN AL-HUSNA RAHMAT", 0, 1, "C");
+        $pdf->Cell(25);
+        $pdf->Cell(0, 5, "MADRASAH IBTIDAIYAH/SD ISLAM", 0, 1, "C");
+        $pdf->Cell(25);
         $pdf->SetFont("Times", "B", "14");
-        $pdf->Cell(0, 5, "PEMERINTAH KOTA TANGERANG", 0, 1, "C");
+        $pdf->Cell(0, 7, "AL-HUSNA", 0, 1, "C");
         $pdf->Cell(25);
-        $pdf->Cell(0, 5, "DINAS PENDIDIKAN", 0, 1, "C");
+          $pdf->SetFont("Times", "", "14");
+        $pdf->Cell(0, 5, "(Terakreditasi A)", 0, 1, "C");
         $pdf->Cell(25);
-        $pdf->Cell(0, 5, "UPT SATUAN PENDIDIKAN", 0, 1, "C");
-        $pdf->Cell(25);
-        $pdf->Cell(0, 5, "SD NEGERI JURUMUDI 1", 0, 1, "C");
-        $pdf->Cell(25);
-        $pdf->SetFont("Times", "B", 9);
+        $pdf->SetFont("Times", "B", 12);
         // Removes bold
         $pdf->SetFont("");
         $pdf->Cell(
             0,
-            3,
-            "Alamat : Jl.Halim Perdana Kusuma, Kel. Jurumudi, Kec. Benda, Konta Tangerang Banten Kode Pos 15124",
+            5,
+            "jl. Dr.Cipto Mangunkusumo/H. Mencong No.73 Paninggilan Utara",
             0,
             1,
             "C"
         );
         $pdf->Cell(25);
-        $pdf->Cell(0, 3, "Email : sdnjurumudisatu@yahoo.com", 0, 1, "C");
+        $pdf->Cell(0, 5, "Kecamatan Ciledug - Kota Tangerang 15153 Telp.(021) 7344 3786", 0, 1, "C");
 
-        $pdf->SetFont("Times", "B", "12");
-        $pdf->Cell(
-            0,
-            5,
-            "NSS : 101280504004                                                    TANGERANG",
-            0,
-            0,
-            "L"
-        );
-        $pdf->Cell(0, 5, "NPSN : 20606975", 0, 0, "R");
+        
 
         $pdf->SetLineWidth(1);
 
-        $pdf->Line(10, 41, 198, 41);
+        $pdf->Line(10, 44, 198, 44);
         $pdf->SetLineWidth(0);
-        $pdf->Line(10, 42, 198, 42);
+        $pdf->Line(10, 45, 198, 45);
         $pdf->Ln(14);
+
         $pdf->SetTextColor(0, 0, 0);
         $pdf->Cell(15);
         $pdf->SetFont("Times", "BU", "14");
@@ -198,7 +192,7 @@ class SuratKeputusanController extends Controller
         $pdf->Cell(310, 5, "Kepala Sekolah", 0, 1, "C");
 
         $pdf->SetFont("Times", "BU", "12");
-        $pdf->Cell(329, 60, "Drs.H.MAHPUJI               ", 0, 1, "C");
+        $pdf->Cell(328, 60, "SITI MASTIAROH,S.Ag", 0, 1, "C");
         $pdf->SetFont("Times", "", "12");
         $pdf->Cell(327, -50, "NIP:196306211984101010", 0, 1, "C");
 
@@ -244,51 +238,43 @@ class SuratKeputusanController extends Controller
         if (count($sk) == 0) {
             return redirect()->to("/surat-keputusan");
         }
-
         $pdf = new Fpdf();
         $pdf->AddPage("P", "A4");
-        $pdf->Image("images/lambang_Kota_Tangerang.png", 11, 5, 31, 31);
+        $pdf->Image("images/sekolah_logo.png", 11, 5, 39, 39);
         $pdf->Cell(25);
-        $pdf->SetTextColor(61, 68, 99);
+        $pdf->SetTextColor(7, 116, 12);
+        $pdf->SetFont("Times", "", "14");
+        $pdf->Cell(0, 5, "YAYASAN PENDIDIKAN AL-HUSNA RAHMAT", 0, 1, "C");
+        $pdf->Cell(25);
+        $pdf->Cell(0, 5, "MADRASAH IBTIDAIYAH/SD ISLAM", 0, 1, "C");
+        $pdf->Cell(25);
         $pdf->SetFont("Times", "B", "14");
-        $pdf->Cell(0, 5, "PEMERINTAH KOTA TANGERANG", 0, 1, "C");
+        $pdf->Cell(0, 7, "AL-HUSNA", 0, 1, "C");
         $pdf->Cell(25);
-        $pdf->Cell(0, 5, "DINAS PENDIDIKAN", 0, 1, "C");
+          $pdf->SetFont("Times", "", "14");
+        $pdf->Cell(0, 5, "(Terakreditasi A)", 0, 1, "C");
         $pdf->Cell(25);
-        $pdf->Cell(0, 5, "UPT SATUAN PENDIDIKAN", 0, 1, "C");
-        $pdf->Cell(25);
-        $pdf->Cell(0, 5, "SD NEGERI JURUMUDI 1", 0, 1, "C");
-        $pdf->Cell(25);
-        $pdf->SetFont("Times", "B", 9);
+        $pdf->SetFont("Times", "B", 12);
         // Removes bold
         $pdf->SetFont("");
         $pdf->Cell(
             0,
-            3,
-            "Alamat : Jl.Halim Perdana Kusuma, Kel. Jurumudi, Kec. Benda, Konta Tangerang Banten Kode Pos 15124",
+            5,
+            "jl. Dr.Cipto Mangunkusumo/H. Mencong No.73 Paninggilan Utara",
             0,
             1,
             "C"
         );
         $pdf->Cell(25);
-        $pdf->Cell(0, 3, "Email : sdnjurumudisatu@yahoo.com", 0, 1, "C");
+        $pdf->Cell(0, 5, "Kecamatan Ciledug - Kota Tangerang 15153 Telp.(021) 7344 3786", 0, 1, "C");
 
-        $pdf->SetFont("Times", "B", "12");
-        $pdf->Cell(
-            0,
-            5,
-            "NSS : 101280504004                                                    TANGERANG",
-            0,
-            0,
-            "L"
-        );
-        $pdf->Cell(0, 5, "NPSN : 20606975", 0, 0, "R");
+        
 
         $pdf->SetLineWidth(1);
 
-        $pdf->Line(10, 41, 198, 41);
+        $pdf->Line(10, 44, 198, 44);
         $pdf->SetLineWidth(0);
-        $pdf->Line(10, 42, 198, 42);
+        $pdf->Line(10, 45, 198, 45);
         $pdf->Ln(14);
         $pdf->SetTextColor(0, 0, 0);
         $pdf->Cell(15);
@@ -347,7 +333,7 @@ class SuratKeputusanController extends Controller
         $pdf->Cell(310, 5, "Kepala Sekolah", 0, 1, "C");
 
         $pdf->SetFont("Times", "BU", "12");
-        $pdf->Cell(329, 60, "Drs.H.MAHPUJI               ", 0, 1, "C");
+       $pdf->Cell(328, 60, "SITI MASTIAROH,S.Ag", 0, 1, "C");
         $pdf->SetFont("Times", "", "12");
         $pdf->Cell(327, -50, "NIP:196306211984101010", 0, 1, "C");
 

@@ -5,7 +5,7 @@
     <link href="{{ asset('css/app.css') }}" rel="stylesheet">
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
-    <title>SPK-APP SDN JURUMUDI 1</title>
+    <title>SPK-APP AL-HUSNA</title>
 </head>
 <body class=" hold-transition sidebar-mini layout-fixed ">
 

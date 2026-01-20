@@ -331,7 +331,7 @@
 
                 <a
                     @click.prevent="hapusPerbandingan()"
-                    class="btn btn-dark mb-3"
+                    class="btn btn-success mb-3"
                     style="width: 100%"
                     :disabled="disabled"
                 >

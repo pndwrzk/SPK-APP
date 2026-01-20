@@ -53,7 +53,7 @@
 
                                     <!-- <a
                                         href="/surat-keputusan/export-pdf"
-                                        class="btn btn-dark float-right"
+                                        class="btn btn-success float-right"
                                         target="_blank"
                                     >
                                         <i class="fas fa-print"></i>
@@ -112,7 +112,7 @@
 
                                             <div class="col-2">
                                                 <button
-                                                    class="btn btn-dark"
+                                                    class="btn btn-success"
                                                     style="margin-top: 37px"
                                                 >
                                                     Cetak
@@ -143,7 +143,10 @@
                                         </thead>
 
                                         <tbody>
-                                            <tr v-for="(s, index) in sk">
+                                            <tr
+                                                v-bind:key="s.id"
+                                                v-for="(s, index) in sk"
+                                            >
                                                 <td>{{ index + 1 }}</td>
 
                                                 <td>

@@ -57,7 +57,7 @@
                                         '/export-pdf'
                                     "
                                     target="_blank"
-                                    class="btn btn-dark float-right"
+                                    class="btn btn-success float-right"
                                 >
                                     <i class="fas fa-print fa-solid"></i>
                                 </a>
@@ -219,7 +219,7 @@
                                                             ha.kode_hasil +
                                                             '/buat-keputusan'
                                                         "
-                                                        class="btn btn-dark btn-sm"
+                                                        class="btn btn-success btn-sm"
                                                     >
                                                         <!-- <i
                                                             class="fas fa-check fa-solid"

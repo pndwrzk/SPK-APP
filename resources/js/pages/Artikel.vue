@@ -32,7 +32,7 @@
                         <div class="card">
                             <!-- <div class="card-header bg-white">
                  <div class="div ">
-                        <button class="btn btn-dark px-3 float-right"><i class="fas fa-plus "></i></button>
+                        <button class="btn btn-success px-3 float-right"><i class="fas fa-plus "></i></button>
                   </div>
               </div> -->
                             <!-- ./card-header -->
@@ -40,7 +40,7 @@
                                 <div class="float-right">
                                     <!-- <a v-if="alternatif.length != 0" href="alternatif/export-pdf" class="btn btn-outline-dark mb-3 mr-2"><i class="fas fa-print"></i></a> -->
                                     <router-link
-                                        class="btn btn-dark px-4 float-right mb-3"
+                                        class="btn btn-success px-4 float-right mb-3"
                                         :to="{ name: 'tambah-artikel' }"
                                         >Tambah Artikel</router-link
                                     >

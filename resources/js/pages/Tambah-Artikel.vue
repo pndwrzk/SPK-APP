@@ -232,7 +232,7 @@
 
                             <button
                                 type="submit"
-                                class="btn btn-dark mt-3 float-right"
+                                class="btn btn-success mt-3 float-right"
                                 :disabled="disabled"
                             >
                                 <i

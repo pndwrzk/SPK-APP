@@ -92,12 +92,7 @@ class AlternatifController extends Controller
             "nama" => $alternatif->nama,
             "jenis_kelamin" => $alternatif->jenis_kelamin,
             "tempat_lahir" => $alternatif->tempat_lahir,
-            "tanggal_lahir" =>
-                date("d", strtotime($alternatif->tanggal_lahir)) .
-                "-" .
-                getBulan(date("m", strtotime($alternatif->tanggal_lahir))) .
-                "-" .
-                date("Y", strtotime($alternatif->tanggal_lahir)),
+            "tanggal_lahir" => $alternatif->tanggal_lahir,
         ];
         return response()->json($data);
     }
@@ -172,99 +167,5 @@ class AlternatifController extends Controller
         }
     }
 
-    // public function exportPDF()
-    // {
-    //     $alternatif = Alternatif::all();
-    //     $pdf = new Fpdf();
-    //     $pdf->AddPage("P", "A4");
-    //     $pdf->Image("images/lambang_Kota_Tangerang.png", 11, 5, 31, 31);
-    //     $pdf->Cell(25);
-    //     $pdf->SetTextColor(61, 68, 99);
-    //     $pdf->SetFont("Times", "B", "14");
-    //     $pdf->Cell(0, 5, "PEMERINTAH KOTA TANGERANG", 0, 1, "C");
-    //     $pdf->Cell(25);
-    //     $pdf->Cell(0, 5, "DINAS PENDIDIKAN", 0, 1, "C");
-    //     $pdf->Cell(25);
-    //     $pdf->Cell(0, 5, "UPT SATUAN PENDIDIKAN", 0, 1, "C");
-    //     $pdf->Cell(25);
-    //     $pdf->Cell(0, 5, "SD NEGERI JURUMUDI 1", 0, 1, "C");
-    //     $pdf->Cell(25);
-    //     $pdf->SetFont("Times", "B", 9);
-    //     // Removes bold
-    //     $pdf->SetFont("");
-    //     $pdf->Cell(
-    //         0,
-    //         3,
-    //         "Alamat : Jl.Halim Perdana Kusuma, Kel. Jurumudi, Kec. Benda, Konta Tangerang Banten Kode Pos 15124",
-    //         0,
-    //         1,
-    //         "C"
-    //     );
-    //     $pdf->Cell(25);
-    //     $pdf->Cell(0, 3, "Email : sdnjurumudisatu@yahoo.com", 0, 1, "C");
-
-    //     $pdf->SetFont("Times", "B", "12");
-    //     $pdf->Cell(
-    //         0,
-    //         5,
-    //         "NSS : 101280504004                                                    TANGERANG",
-    //         0,
-    //         0,
-    //         "L"
-    //     );
-    //     $pdf->Cell(0, 5, "NPSN : 20606975", 0, 0, "R");
-
-    //     $pdf->SetLineWidth(1);
-
-    //     $pdf->Line(10, 41, 198, 41);
-    //     $pdf->SetLineWidth(0);
-    //     $pdf->Line(10, 42, 198, 42);
-    //     $pdf->Ln(14);
-    //     $pdf->SetTextColor(0, 0, 0);
-    //     $pdf->SetFont("Times", "U", "14");
-    //     $pdf->Cell(15);
-    //     $pdf->Cell(0, 7, "LAPORAN DAFTAR GURU", 0, 1, "C");
-    //     $pdf->Ln(15);
-
-    //     $pdf->SetFont("Times", "B", "12");
-    //     $pdf->Cell(10, 9, "NO", 1, 0, "C");
-    //     $pdf->Cell(50, 9, "NIP", 1, 0, "C");
-    //     $pdf->Cell(40, 9, "Nama", 1, 0, "C");
-    //     $pdf->Cell(30, 9, "Jenis Kelamin", 1, 0, "C");
-    //     $pdf->Cell(30, 9, "Tempat Lahir", 1, 0, "C");
-    //     $pdf->Cell(30, 9, "Tanggal Lahir", 1, 1, "C");
-
-    //     $no = 1;
-    //     $pdf->SetFont("Times", "", "11");
-    //     foreach ($alternatif as $a) {
-    //         $pdf->Cell(10, 9, $no++, 1, 0, "C");
-    //         $pdf->Cell(50, 9, $a->nip, 1, 0, "C");
-    //         $pdf->Cell(40, 9, $a->nama, 1, 0, "C");
-    //         $pdf->Cell(30, 9, $a->jenis_kelamin, 1, 0, "C");
-    //         $pdf->Cell(30, 9, $a->tempat_lahir, 1, 0, "C");
-    //         $pdf->Cell(
-    //             30,
-    //             9,
-    //             date("d-m-Y", strtotime($a->tanggal_lahir)),
-    //             1,
-    //             1,
-    //             "C"
-    //         );
-    //     }
-
-    //     $pdf->Ln(30);
-    //     date_default_timezone_set("Asia/Jakarta");
-    //     $currentdate = date("d-M-Y");
-    //     $pdf->Cell(327, 9, "Tangerang, " . $currentdate, 0, 1, "C");
-    //     $pdf->Cell(308, 3, "Mengetahui,", 0, 1, "C");
-    //     $pdf->Cell(313, 5, "Kepala Sekolah", 0, 1, "C");
-
-    //     $pdf->SetFont("Times", "BU", "12");
-    //     $pdf->Cell(335, 60, "Drs.H.MAHPUJI                ", 0, 1, "C");
-    //     $pdf->SetFont("Times", "", "12");
-    //     $pdf->Cell(333, -50, "NIP:196306211984101010", 0, 1, "C");
-
-    //     $pdf->Output();
-    //     exit();
-    // }
+    
 }
