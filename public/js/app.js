@@ -4034,7 +4034,7 @@ var render = function render() {
     }
   }, [_c("i", {
     staticClass: "fas fa-circle nav-icon"
-  }), _vm._v(" "), _c("p", [_vm._v("Surat Keputusan")])])], 1)])])])])])], 1);
+  }), _vm._v(" "), _c("p", [_vm._v("Hasil keputusan")])])], 1)])])])])])], 1);
 };
 var staticRenderFns = [function () {
   var _vm = this,

@@ -123,7 +123,7 @@
                                 >
                                     <i class="fas fa-circle nav-icon"></i>
 
-                                    <p>Surat Keputusan</p>
+                                    <p>Hasil keputusan</p>
                                 </router-link>
                             </li>
                         </ul>
