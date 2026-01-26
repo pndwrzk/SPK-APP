@@ -3278,7 +3278,7 @@ __webpack_require__.r(__webpack_exports__);
     deleteKeputusan: function deleteKeputusan(kode) {
       Swal.fire({
         title: "Hapus Data?",
-        text: "Surat keputusan akan dihapus",
+        text: "Hasil Keputusan akan dihapus",
         type: "warning",
         showCancelButton: true,
         confirmButtonColor: "#DD6B55",
@@ -6889,7 +6889,7 @@ var render = function render() {
     }
   }, [_vm._v("\n                                Dashboard\n                            ")])], 1), _vm._v(" "), _c("li", {
     staticClass: "breadcrumb-item active"
-  }, [_vm._v("\n                            Surat Keputusan\n                        ")])])])])])]), _vm._v(" "), _c("section", {
+  }, [_vm._v("\n                            Hasil Keputusan\n                        ")])])])])])]), _vm._v(" "), _c("section", {
     staticClass: "content"
   }, [_c("div", {
     staticClass: "container-fluid"
@@ -6899,7 +6899,7 @@ var render = function render() {
     staticClass: "col-12"
   }, [_c("div", [_vm.sk.length == 0 ? _c("div", {
     staticClass: "card p-4"
-  }, [_vm._m(1), _vm._v("\n                            Data Surat Keputusan tidak teredia\n                        ")]) : _c("div", {
+  }, [_vm._m(1), _vm._v("\n                            Data Hasil Keputusan tidak teredia\n                        ")]) : _c("div", {
     staticClass: "card"
   }, [_vm._m(2), _vm._v(" "), _c("div", {
     staticClass: "card-body"
@@ -6966,7 +6966,7 @@ var staticRenderFns = [function () {
     _c = _vm._self._c;
   return _c("div", {
     staticClass: "col-sm-6"
-  }, [_c("h1", [_vm._v("Surat Keputusan")])]);
+  }, [_c("h1", [_vm._v("Hasil Keputusan")])]);
 }, function () {
   var _vm = this,
     _c = _vm._self._c;
@@ -6978,7 +6978,7 @@ var staticRenderFns = [function () {
     _c = _vm._self._c;
   return _c("div", {
     staticClass: "card-header"
-  }, [_c("b", [_vm._v("Daftar Surat Keputusan")])]);
+  }, [_c("b", [_vm._v("Daftar Hasil Keputusan")])]);
 }, function () {
   var _vm = this,
     _c = _vm._self._c;

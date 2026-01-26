@@ -8,7 +8,7 @@
             <div class="container-fluid">
                 <div class="row mb-2">
                     <div class="col-sm-6">
-                        <h1>Surat Keputusan</h1>
+                        <h1>Hasil Keputusan</h1>
                     </div>
 
                     <div class="col-sm-6">
@@ -22,7 +22,7 @@
                             </li>
 
                             <li class="breadcrumb-item active">
-                                Surat Keputusan
+                                Hasil Keputusan
                             </li>
                         </ol>
                     </div>
@@ -44,12 +44,12 @@
                                     <i class="fas fa-info"></i>
                                     Info:
                                 </h5>
-                                Data Surat Keputusan tidak teredia
+                                Data Hasil Keputusan tidak teredia
                             </div>
 
                             <div class="card" v-else>
                                 <div class="card-header">
-                                    <b>Daftar Surat Keputusan</b>
+                                    <b>Daftar Hasil Keputusan</b>
 
                                     <!-- <a
                                         href="/surat-keputusan/export-pdf"
@@ -230,7 +230,7 @@ export default {
         deleteKeputusan(kode) {
             Swal.fire({
                 title: "Hapus Data?",
-                text: "Surat keputusan akan dihapus",
+                text: "Hasil Keputusan akan dihapus",
                 type: "warning",
                 showCancelButton: true,
                 confirmButtonColor: "#DD6B55",
